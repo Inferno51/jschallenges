@@ -27,8 +27,13 @@ function setText(text) {
 	return $('#save-me').val(text);
 }
 
+function doClear() {
+    $('#mytext').val('');
+}
+
 saveButton.on('click', function() {
 	localStorage.setItem('savedText', getText());
+	setText('');
 })
 
 loadButton.on('click', function() {
