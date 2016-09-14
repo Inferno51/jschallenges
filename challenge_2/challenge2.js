@@ -22,5 +22,12 @@ $(function(){
 	$(".post:last-of-type").remove();
 	$(".post:last-of-type").remove();
 
-	$("footer").hide();
+	$("img").hover(
+		function() {
+			$(this).fadeOut();
+		},
+		function() {
+			$(this).fadeIn();
+		}
+	);
 })
