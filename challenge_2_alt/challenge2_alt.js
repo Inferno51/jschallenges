@@ -28,8 +28,38 @@
  *   and how to use it in JS. You will also need to download a sound bite
  */
 
- $(function(){
+$(function(){
+	
+	function shot() {
+		return Math.random();
+	}
 
+	$("#teamone-shoot").click( function() {
+    	$("#teamone-numshots").html(function(i,val){ return +val+1});
+    	
+		$("body").css('background-color', '#ffffff');
+    	if (shot() > 0.75) {
+    		$("#teamone-numhits").html(function(i,val){ return +val+1});
+    		$("body").css('background-color', '#7171da');
+    	}    
+	});
 
+	$("#teamtwo-shoot").click( function() {
+    	$("#teamtwo-numshots").html(function(i,val){ return +val+1});
+    	
+		$("body").css('background-color', '#ffffff');
+    	if (shot() > 0.75) {
+    		$("#teamtwo-numhits").html(function(i,val){ return +val+1});
+    		$("body").css('background-color', '#ff3333');
+    	}    
+	});
 
- })
+	$("#reset").click( function() {
+		$("#num-resets").html(function(i,val){ return +val+1 });
+		$("#teamone-numshots").html(function(i,val){ return 0 });
+		$("#teamone-numhits").html(function(i,val){ return 0 });
+		$("#teamtwo-numshots").html(function(i,val){ return 0 });
+		$("#teamtwo-numhits").html(function(i,val){ return 0 });
+		$("body").css('background-color', '#ffffff');
+	});
+});
