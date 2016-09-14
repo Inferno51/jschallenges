@@ -21,4 +21,6 @@ $(function(){
 
 	$(".post:last-of-type").remove();
 	$(".post:last-of-type").remove();
+
+	$("footer").hide();
 })
