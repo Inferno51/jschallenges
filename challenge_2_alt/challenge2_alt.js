@@ -34,11 +34,13 @@ $(function(){
 		return Math.random();
 	}
 
+	
+
 	$("#teamone-shoot").click( function() {
     	$("#teamone-numshots").html(function(i,val){ return +val+1});
     	
 		$("body").css('background-color', '#ffffff');
-    	if (shot() > 0.75) {
+    	if (shot() > 0.85) {
     		$("#teamone-numhits").html(function(i,val){ return +val+1});
     		$("body").css('background-color', '#7171da');
     	}    
@@ -48,7 +50,7 @@ $(function(){
     	$("#teamtwo-numshots").html(function(i,val){ return +val+1});
     	
 		$("body").css('background-color', '#ffffff');
-    	if (shot() > 0.75) {
+    	if (shot() > 0.65) {
     		$("#teamtwo-numhits").html(function(i,val){ return +val+1});
     		$("body").css('background-color', '#ff3333');
     	}    
